@@ -1,0 +1,322 @@
+import 'package:flutter/material.dart';
+import 'package:percent_indicator/percent_indicator.dart';
+import 'package:toggle_switch/toggle_switch.dart';
+import 'package:flutter/services.dart';
+
+class HomePageWidget extends StatefulWidget {
+  const HomePageWidget({Key? key}) : super(key: key);
+
+  @override
+  _HomePageWidgetState createState() => _HomePageWidgetState();
+}
+
+class _HomePageWidgetState extends State<HomePageWidget> {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        // Add your onTap logic here
+      },
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: Colors.white, // Background color
+        body: SafeArea(
+          top: true,
+          child: Stack(
+            children: [
+              Align(
+                alignment: AlignmentDirectional(0.94, -0.87),
+                child: CircularPercentIndicator(
+                  percent: 0.5,
+                  radius: 40,
+                  lineWidth: 12,
+                  animation: true,
+                  progressColor: Colors.blue, // Progress color
+                  backgroundColor: Colors.white, // Background color
+                  center: Text(
+                    '50%',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(0.72, -0.83),
+                child: Text(
+                  'Battery Level',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(0.00, 0.00),
+                child: Stack(
+                  children: [
+                    Align(
+                      alignment: AlignmentDirectional(0.65, 0.48),
+                      child: Container(
+                        width: 115,
+                        height: 71,
+                        decoration: BoxDecoration(
+                          color: Colors.white, // Background color
+                        ),
+                        child: ElevatedButton(
+                          onPressed: () {
+                            // Button pressed logic
+                          },
+                          child: Text(
+                            'Actuator',
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.blue, // Button color
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 24,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: AlignmentDirectional(0.07, 0.44),
+                      child: Container(
+                        width: 100,
+                        height: 46,
+                        decoration: BoxDecoration(
+                          color: Colors.white, // Background color
+                        ),
+                        child: Align(
+                          alignment: AlignmentDirectional(0.00, 0.00),
+                          child: Text(
+                            'Current Angle:',
+                            style: TextStyle(
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: AlignmentDirectional(0.32, 0.45),
+                      child: Container(
+                        width: 100,
+                        height: 46,
+                        decoration: BoxDecoration(
+                          color: Colors.white, // Background color
+                        ),
+                        child: Align(
+                          alignment: AlignmentDirectional(0.00, 0.00),
+                          child: Text(
+                            '', // Add content here
+                            style: TextStyle(
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: AlignmentDirectional(0.07, 0.53),
+                      child: Container(
+                        width: 117,
+                        height: 44,
+                        decoration: BoxDecoration(
+                          color: Colors.white, // Background color
+                        ),
+                        child: Align(
+                          alignment: AlignmentDirectional(0.00, 0.00),
+                          child: Text(
+                            'Current Range:',
+                            style: TextStyle(
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: AlignmentDirectional(0.33, 0.53),
+                      child: Container(
+                        width: 100,
+                        height: 44,
+                        decoration: BoxDecoration(
+                          color: Colors.white, // Background color
+                        ),
+                        child: Align(
+                          alignment: AlignmentDirectional(0.00, 0.00),
+                          child: Text(
+                            '', // Add content here
+                            style: TextStyle(
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: AlignmentDirectional(-0.90, -0.86),
+                      child: Container(
+                        width: 100,
+                        height: 72,
+                        decoration: BoxDecoration(
+                          color: Colors.white, // Background color
+                        ),
+                        child: ElevatedButton(
+                          onPressed: () {
+                            SystemNavigator.pop();
+                          },
+                          child: Text(
+                            'Exit',
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.red, // Button color
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 24,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(-0.58, 0.60),
+                child: Container(
+                  width: 287,
+                  height: 236,
+                  decoration: BoxDecoration(
+                    color: Colors.white, // Background color
+                  ),
+                  child: Stack(
+                    children: [
+                      Align(
+                        alignment: AlignmentDirectional(0.00, 0.00),
+                        child: Stack(
+                          children: [
+                            Align(
+                              alignment: AlignmentDirectional(-0.85, 0.04),
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  // Button pressed logic
+                                },
+                                child: Text(
+                                  '←',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 28,
+                                  ),
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.blue, // Button color
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 24,
+                                  ),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: AlignmentDirectional(-0.04, -0.53),
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  // Button pressed logic
+                                },
+                                child: Text(
+                                  '↑',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 28,
+                                  ),
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.blue, // Button color
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 24,
+                                  ),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Align(
+                        alignment: AlignmentDirectional(0.70, 0.03),
+                        child: ElevatedButton(
+                          onPressed: () {
+                            // Button pressed logic
+                          },
+                          child: Text(
+                            '→',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 28,
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.blue, // Button color
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 24,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Align(
+                        alignment: AlignmentDirectional(-0.04, 0.66),
+                        child: ElevatedButton(
+                          onPressed: () {
+                            // Button pressed logic
+                          },
+                          child: Text(
+                            '↓',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 28,
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.blue, // Button color
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 24,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
